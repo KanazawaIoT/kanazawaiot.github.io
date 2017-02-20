@@ -9,8 +9,14 @@ AMOUNTY = 10,
 
 camera, scene, renderer;
 
-init();
-animate();
+$(function(){
+    var device = $(window).width();
+    if( device > 768 ) {
+        init();
+        animate();
+    }
+});
+
 
 function init() {
 
