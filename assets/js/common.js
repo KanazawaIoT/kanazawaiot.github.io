@@ -19,9 +19,11 @@ $(function(){
 
 $(function(){
     var device = $(window).width();
-    if( device > 768 ) {
-        init();
-        animate();
+    if( device < 768 ) {
+      $('.gnav li a').click(function(){
+          $('.gnav').slideUp();
+          $('#header').removeClass('open');
+      });
     }
 });
 
