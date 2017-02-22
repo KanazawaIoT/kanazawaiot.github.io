@@ -16,6 +16,16 @@ $(function(){
     $('.gnav').slideToggle();
   });
 });
+$(function(){
+  $(window).on('resize',function(){
+    const windowWidth = $(window).width();
+   if( windowWidth > 765 ){
+       $('.gnav').show();
+    } else {
+       $('.gnav').hide();
+     }
+  });
+});
 
 $(function(){
     var device = $(window).width();
